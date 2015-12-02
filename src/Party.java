@@ -3,6 +3,8 @@
 public class Party {
 	String name;
 	Evidence licenses;
+	private Intellect intellect;
+	private Property property;
 	
 	public Party(String name){
 		this.name = name;
