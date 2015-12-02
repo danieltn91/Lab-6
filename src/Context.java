@@ -1,5 +1,6 @@
 
 public class Context {
+	private Type type;
 	private String contextType;
 	private List<String> relatedContext;
 	
