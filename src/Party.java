@@ -1,4 +1,5 @@
-
+//	A party is a group that is identified by a name and has licenses
+//	that gives them ownership to many things.
 public class Party {
 	String name;
 	Evidence licenses;
@@ -8,11 +9,13 @@ public class Party {
 		licenses = new Evidence();
 	}
 	
+	// Claim ownership of something
 	public void addClaim(String claimName){
 		Claim cl = new Claim(claimName);
 		licenses.addGameLicense(cl);
 	}
 	
+	// Validate ownership
 	public boolean checkClaim(String gameTitle){
 		for (int i = 0; i < licenses.claims.size(); i++){
 			if (licenses.claims.get(i).name.equalsIgnoreCase(gameTitle)){
